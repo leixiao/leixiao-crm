@@ -39,7 +39,8 @@ export function createApi() {
       }else if(err.response.status == 503){
         err.response.data = 'Service Unavailable, please contact IT.'
       }
-      //Here the notyf cannot show up.
+      
+      //Here the notyf cannot show up. Console shows error: "Cannot read properties of undefined (reading 'error')"
       notyf.error({
         message: err.response.data,
         duration: 5000,
